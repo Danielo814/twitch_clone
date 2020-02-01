@@ -2,7 +2,7 @@ import React from "react";
 
 class GoogleAuth extends React.Component {
   state = { isSignedIn = null };
-  
+
   componentDidMount() {
     window.gapi.load("client: auth2", () => {
       window.gapi.client
@@ -18,6 +18,12 @@ class GoogleAuth extends React.Component {
           });
         });
     });
+  }
+
+  renderAuthButton() {
+      if (this.state.isSignedIn === null) {
+          return <div>I don't know if we are signed in.</div>
+      }
   }
 
   render() {
