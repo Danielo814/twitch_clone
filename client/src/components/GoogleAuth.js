@@ -9,7 +9,9 @@ class GoogleAuth extends React.Component {
             "604334040053-tci2as0f3h7rngjv58meiq3dm07ka4bq.apps.googleusercontent.com",
           scope: "email"
         })
-        .then(() => {});
+        .then(() => {
+          this.auth = window.gapi.auth2.getAuthInstance();
+        });
     });
   }
 
