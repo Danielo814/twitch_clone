@@ -1,5 +1,5 @@
-import { combineReducers } from redux;
+import { combineReducers } from "redux";
 
 export default combineReducers({
-    replaceme: () => 5
+  replaceme: () => 5
 });
