@@ -11,8 +11,8 @@ class StreamCreate extends React.Component {
     );
   }
 
-  onSubmit(event) {
-    event.preventDefault();
+  onSubmit(formValues) {
+    console.log(formValues);
   }
 
   render() {
@@ -27,6 +27,7 @@ class StreamCreate extends React.Component {
           component={this.renderInput}
           label="Enter Description"
         />
+        <button className="ui button primary">Submit</button>
       </form>
     );
   }
