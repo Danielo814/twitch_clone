@@ -3,7 +3,12 @@ import { Field, reduxForm } from "redux-form";
 
 class StreamCreate extends React.Component {
   renderInput({ input }) {
-    return <input {...input} />;
+    return (
+      <div className="field">
+        <label></label>
+        <input {...input} />
+      </div>
+    );
   }
 
   render() {
