@@ -12,7 +12,7 @@ class StreamCreate extends React.Component {
     }
   }
 
-  renderInput({ input, label, meta }) {
+  renderInput = ({ input, label, meta }) => {
     return (
       <div className="field">
         <label>{label}</label>
@@ -21,7 +21,7 @@ class StreamCreate extends React.Component {
         <div>{meta.error}</div>
       </div>
     );
-  }
+  };
 
   onSubmit(formValues) {
     console.log(formValues);
