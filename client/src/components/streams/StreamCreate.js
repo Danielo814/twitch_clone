@@ -2,6 +2,16 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 
 class StreamCreate extends React.Component {
+  renderError({ error, touched }) {
+    if (touched && error) {
+      return (
+        <div className="ui error message">
+          <div className="header"></div>
+        </div>
+      );
+    }
+  }
+
   renderInput({ input, label, meta }) {
     return (
       <div className="field">
