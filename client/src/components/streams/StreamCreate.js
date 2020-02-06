@@ -7,6 +7,7 @@ class StreamCreate extends React.Component {
       <div className="field">
         <label>{label}</label>
         <input {...input} />
+        <div>{meta.error}</div>
       </div>
     );
   }
