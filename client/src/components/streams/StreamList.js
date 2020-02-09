@@ -12,4 +12,8 @@ class StreamList extends React.Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {};
+};
+
 export default connect(null, { fetchStreams })(StreamList);
