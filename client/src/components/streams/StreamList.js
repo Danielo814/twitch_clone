@@ -7,6 +7,16 @@ class StreamList extends React.Component {
     this.props.fetchStreams();
   }
 
+  renderList() {
+    this.props.streams.map(stream => {
+      return (
+        <div className="item" key={stream.id}>
+          <i className="large middle aligned icon camera" />
+        </div>
+      );
+    });
+  }
+
   render() {
     console.log(this.props.streams);
     return <div></div>;
