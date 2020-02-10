@@ -12,6 +12,7 @@ class StreamList extends React.Component {
       return (
         <div className="right floated content">
           <button className="ui button primary">Edit</button>
+          <button className="ui button negative">Delete</button>
         </div>
       );
     }
