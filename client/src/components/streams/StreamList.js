@@ -36,6 +36,11 @@ class StreamList extends React.Component {
 
   renderCreate() {
     if (this.props.isSignedIn) {
+      return (
+        <div>
+          <Link to="/streams/new">Create Stream</Link>
+        </div>
+      );
     }
   }
 
