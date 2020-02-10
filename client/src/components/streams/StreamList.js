@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { fetchStreams } from "../../actions";
 
 class StreamList extends React.Component {
@@ -33,7 +34,10 @@ class StreamList extends React.Component {
     });
   }
 
-  renderCreate() {}
+  renderCreate() {
+    if (this.props.isSignedIn) {
+    }
+  }
 
   render() {
     return (
