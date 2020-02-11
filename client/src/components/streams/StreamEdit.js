@@ -11,4 +11,4 @@ const mapStateToProps = (state, ownProps) => {
   return { stream: null };
 };
 
-export default StreamEdit;
+export default connect(mapStateToProps)(StreamEdit);
