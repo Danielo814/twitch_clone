@@ -7,8 +7,7 @@ const StreamEdit = props => {
 };
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(ownProps);
-  return { stream: null };
+  return { stream: state.streams[ownProps.match.params.id] };
 };
 
 export default connect(mapStateToProps)(StreamEdit);
