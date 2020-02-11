@@ -6,8 +6,9 @@ const StreamEdit = props => {
   return <div>StreamEdit</div>;
 };
 
-const mapStateToProps = state => {
-  return {stream: };
-}
+const mapStateToProps = (state, ownProps) => {
+  console.log(ownProps);
+  return { stream: null };
+};
 
 export default StreamEdit;
