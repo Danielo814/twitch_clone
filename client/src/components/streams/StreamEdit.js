@@ -4,9 +4,6 @@ import { fetchStream } from "../../actions";
 
 class StreamEdit extends React.Component {
   componentDidMount() {
-    if (!this.props.stream) {
-      return <div>Loading...</div>;
-    }
     this.props.fetchStream(this.props.match.params.id);
   }
 
@@ -16,6 +13,9 @@ class StreamEdit extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  if (!this.props.stream) {
+    return <div>Loading...</div>;
+  }
   return { stream: state.streams[ownProps.match.params.id] };
 };
 
