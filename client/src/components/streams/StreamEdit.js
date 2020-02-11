@@ -8,14 +8,14 @@ class StreamEdit extends React.Component {
   }
 
   render() {
+    if (!this.props.stream) {
+      return <div>Loading...</div>;
+    }
     return <div>StreamEdit</div>;
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
-  if (!this.props.stream) {
-    return <div>Loading...</div>;
-  }
   return { stream: state.streams[ownProps.match.params.id] };
 };
 
