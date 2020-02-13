@@ -4,17 +4,6 @@ import { createStream } from "../../actions";
 import StreamFrom from "./StreamForm";
 
 class StreamCreate extends React.Component {
-  renderInput = ({ input, label, meta }) => {
-    const className = `field ${meta.error && meta.touched ? "error" : ""}`;
-    return (
-      <div className={className}>
-        <label>{label}</label>
-        <input {...input} autoComplete="off" />
-        {this.renderError(meta)}
-      </div>
-    );
-  };
-
   onSubmit = formValues => {
     this.props.createStream(formValues);
   };
