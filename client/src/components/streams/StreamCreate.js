@@ -18,9 +18,4 @@ class StreamCreate extends React.Component {
   }
 }
 
-const formWrapped = reduxForm({
-  form: "streamCreate",
-  validate
-})(StreamCreate);
-
 export default connect(null, { createStream })(formWrapped);
