@@ -8,11 +8,20 @@ class StreamEdit extends React.Component {
     this.props.fetchStream(this.props.match.params.id);
   }
 
+  onSubmit = formValues => {
+    console.log(formValues);
+  };
+
   render() {
     if (!this.props.stream) {
       return <div>Loading...</div>;
     }
-    return <div>{this.props.stream.title}</div>;
+    return (
+      <div>
+        <h3>Edit a stream</h3>
+        <StreamForm onSubmit={this.onSubmit} />
+      </div>
+    );
   }
 }
 
