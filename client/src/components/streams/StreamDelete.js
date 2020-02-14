@@ -33,8 +33,8 @@ class StreamDelete extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return { stream: state.streams[this.props.match.parmas.id] };
+const mapStateToProps = (state, ownProps) => {
+  return { stream: state.streams[ownProps.match.parmas.id] };
 };
 
 export default connect(mapStateToProps, { fetchStream })(StreamDelete);
