@@ -4,6 +4,10 @@ import { connect } from "react-redux";
 import { fetchStream } from "../../actions";
 
 class StreamShow extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   componentDidMount() {
     this.props.fetchStream(this.props.match.params.id);
   }
@@ -15,6 +19,7 @@ class StreamShow extends React.Component {
 
     return (
       <div>
+        <video />
         <h1>{this.props.stream.title}</h1>
         <h5>{this.props.stream.description}</h5>
       </div>
