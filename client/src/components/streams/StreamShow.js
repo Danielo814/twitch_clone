@@ -8,7 +8,9 @@ class StreamShow extends React.Component {
   }
 
   render() {
-    console.log(props);
+    if (!this.props.stream) {
+      return <div></div>;
+    }
     return <div>StreamShow</div>;
   }
 }
@@ -17,4 +19,4 @@ const mapStateToProps = (state, ownProps) => {
   return { stream: state.streams[ownProps.match.params.id] };
 };
 
-export default connect(null, { fetchStream })(StreamShow);
+export default connect(mapStateToProps, { fetchStream })(StreamShow);
