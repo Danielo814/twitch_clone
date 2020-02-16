@@ -14,7 +14,7 @@ class StreamShow extends React.Component {
     this.props.fetchStream(id);
     flv.createPlayer({
       type: "flv",
-      url: `http://localhost:8000/live/${id}`
+      url: `http://localhost:8000/live/${id}.flv`
     });
   }
 
