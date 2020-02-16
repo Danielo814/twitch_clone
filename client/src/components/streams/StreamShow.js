@@ -11,6 +11,7 @@ class StreamShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchStream(this.props.match.params.id);
+    flv.createPlayer();
   }
 
   render() {
