@@ -20,7 +20,10 @@ class StreamShow extends React.Component {
     this.player.load();
   }
 
-  buildPlayer() {}
+  buildPlayer() {
+    if (this.player || !this.props.stream) {
+    }
+  }
 
   render() {
     if (!this.props.stream) {
