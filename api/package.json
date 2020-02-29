@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "json-server": "^0.15.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
